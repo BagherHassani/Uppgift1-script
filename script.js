@@ -12,7 +12,7 @@ const errorconfirmPassword = document.getElementById("error-confirmPassword");
 
 myForm.addEventListener( 'submit', (e) => {
     e.preventDefault()
-   
+    )
 
     
 })
@@ -98,6 +98,7 @@ myForm.addEventListener( 'submit', (e) => {
 
     function ValidateDOB() {
         minAge= document.getElementById("error-age");
+        var x = document.getElementById("age").value;
  
         //Get the date from the TextBox.
         var dateString = document.getElementById("age").value;
@@ -105,14 +106,40 @@ myForm.addEventListener( 'submit', (e) => {
  
         //Check whether valid dd/MM/yyyy Date Format.
         if (regex.test(dateString)) {
+    
            
-            minAge.innerText = "";
+            var dateString = document.getElementById("age").value;
+            if(dateString !=""){
+              var today = new Date();
+              var birthDate = new Date(dateString);
+              var age = today.getFullYear() - birthDate.getFullYear();
+              var m = today.getMonth() - birthDate.getMonth();
+              var da = today.getDate() - birthDate.getDate();
+              if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
+                age--;
+              }
+              if(m<0){
+                m +=12;
+              }
+              if(da<0){
+                da +=30;
+              }
+              if (age >= 1 && age <= 18) {
+                minAge.innerText = ("Du måste vara 18 år")
+                return true;
+              }else {
+                minAge.innerText = ""
+                return false;
+              }
+               
+           }
             return true;
         } else 
         {  minAge.innerText = "Ange föddelsedatum i denna ordning dd/MM/yyyy."
             return false;
         }
-            
+        
+      
            
         
     }
