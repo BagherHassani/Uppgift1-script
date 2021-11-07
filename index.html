@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title> Ragisterering</title>
+   
+
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+      <link rel="stylesheet" href="styel.css">
+   
+</head>
+<body>
+  
+   <div class="container">
+       <h1 Sgin Up ></h1>
+       <div class="row">
+           <form class=" col s8" id="myForm" novalidate>
+               <div class="row">
+               <div class"input-filed.col.s6">
+                   <label for="firstname"> Förnamn</label>
+                   <input type="text"name="First Name" id="firstName" />
+                   <div style="color: red;" id="error-firstName" ><small ></small></div>
+                </div>
+
+                <div class="input-filed.col.s6">
+                    <label for="lastname"> Efternamn</label>
+                    <input type="text"name="Last Name" id="lastName" />
+                    <div id="error-lastName" style="color: red;"> <small></small></div>
+                </div>
+                <div class="input-filed.col.s6">
+                    <label for="alder"> Ålder </label>
+                    <input type="text"name="Age" id="age" placeholder=" dag/månad/år" size="12"/>
+                    
+                   
+                    <div id="error-age" style="color: red;"><small></small></div> 
+                </div>
+                </div>
+
+                <div class="row">
+                   <div class="input-filed col s6">
+                    <label for="password"> Lösenord </label>
+                    <input type="password"name="Password" id="password" />
+                    <div id="error-password" style="color: red;"> <small></small></div>
+                   </div>
+
+                  <div class="input-filed col s6">
+                    <label for="confirmPassword">Bekräfta lösenord</label>
+                    <input type="password"name=" Confirm Password" id="confirmPassword"/>
+                    <div id="error-confirmPassword" style="color: red;"> <small></small></div>
+                  </div>
+                 
+                </div>
+
+                    <div class="row">
+                        <div class="input-filed col s12">
+                            <label for="email">E-postl</label>
+                            <input type="email" name="Email" id="email" />
+                            <div id="error-email" style="color: red;"> <small></small></div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-filed col s6">
+                            <label for="Adressinfo"> Adress info</label>
+                          <textarea  name="adressInfo" id="adressInfo" cols="30" rows="10" ></textarea>
+                         <div id="error-adressInfo" style="color: red;">  <small></small></div>
+                        </div>
+     
+                       <div class="input-filed col s6">
+                         <label for="postcode"> Postnummer </label>
+                         <input type="text"name="Post nummer"  id="postnummer"/>
+                         <div id="error-postnummer" style="color: red;"><small></small></div>
+                       </div>
+                      
+                     </div>
+                    <button class="btn waves-effect waves-light" type="submit">
+                        Registrering
+                    </button>
+                  
+
+               </div>
+
+            </form>
+
+       </div>
+
+   </div>
+       
+
+      
+
+  
+    <script></script>
+
+ <!-- Compiled and minified JavaScript -->
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+<script src="script.js"></script>     
+</body>
+</html>
